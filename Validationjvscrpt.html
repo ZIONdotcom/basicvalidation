@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAVASCRIPT FUNCTION</title>
+</head>
+<body>
+    <div class="design">
+        <h2>Enter the age of your favorite artist: </h2>
+        <input type="number" id="age">
+        <button type="button" id="submit" onclick="artistAge()">Submit</button>
+        <h2 id="message"></h2>
+    </div>
+
+    <script>
+        function artistAge() {
+            var message = document.getElementById("message");
+            var age = document.getElementById("age").value;
+            let text;
+            
+            if (age < 25) {
+                text = "They're " + age + " and they're younger than Google.";
+            } else if (age == 25) {
+                text = "They're " + age + " and they're as old as Google.";
+            } else {
+                text = "They're " + age + " and they're older than Google.";
+            }
+            
+            message.textContent = text;
+        }
+    </script>
+</body>
+</html>
